@@ -29,7 +29,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="#">News</a>
+                    <a class="brand" href="<?php echo $this->url(array('controller'=>'index', 'action'=>'index')); ?>">News</a>
                     <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
                     <div class="nav-collapse collapse">
                         <ul class="nav">
@@ -49,6 +49,7 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
+        <a id="top"></a>
 
         <!-- START THE FEATURETTES -->
         <?php echo $this->layout()->content; ?>
@@ -57,8 +58,8 @@
 
         <!-- FOOTER -->
         <footer>
-            <p class="pull-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            <p class="pull-right"><a href="#top">Back to top</a></p>
+            <p>&copy; 2013 Chuehnone &middot; </p>
         </footer>
 
     </div><!-- /.container -->
