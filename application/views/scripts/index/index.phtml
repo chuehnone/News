@@ -1,0 +1,15 @@
+<?php $this->title = 'news'; ?>
+
+<?php foreach($this->news as $news): ?>
+<div class="featurette">
+    <h2 class="featurette-heading"><?php echo $this->escape($news->title); ?> <small><?php echo $this->escape($news->time); ?></small></h2>
+
+    <blockquote>
+        <?php $link = $this->link->fetchRow('`link_id` = ' . $news->link_id); ?>
+        <p class="lead"><a href="<?php echo $link->url; ?>" target="_blank"><?php echo $link->title; ?></a></p>
+        <p><a href="<?php echo $link->url; ?>" target="_blank"><?php echo $link->abstract; ?></a></p>
+    </blockquote>
+</div>
+
+<hr class="featurette-divider">
+<?php endforeach; ?>
